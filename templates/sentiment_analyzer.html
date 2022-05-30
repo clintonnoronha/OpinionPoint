@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>OpinionPoint</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+  <link href="{{ url_for('static', filename='img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{ url_for('static', filename='vendor/aos/aos.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/boxicons/css/boxicons.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/remixicon/remixicon.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename='vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp - v4.7.0
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <h1 class="logo me-auto me-lg-0"><a href="/">OpinionPoint<span>.</span></a></h1>
+
+      <a href="visualize" class="get-started-btn scrollto">Visualize</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
+        <div class="col-xl-6 col-lg-8">
+          <h1>Your Doorway to Opinions<span>.</span></h1>
+          <h2></h2>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Statistics</h2>
+      
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+          <div style="text-align: center;">
+            <div >
+               {% if compound %}
+               <h3 style="color: black; text-align: center;font-size:25px; border-radius: 25px;">How are people reacting on {{keyword}} by analyzing {{tweets}} Tweets?</h3>
+               <br>
+               <h6 style="color: black; text-align: center; border-radius: 25px;">Search Period : [ {{fromDate}} ]  -->  [ {{toDate}} ]</h6>
+               {% endif %}
+            </div>
+         </div>
+        <!--parent div for reports--> 
+        <br><br><br>       
+        <div class="row">         
+          <div>         
+            <!--General sentiment report-->         
+            <div class="row">         
+              <div class="mt-100">         
+                <h4 style="color: black; text-align: center;font-size:30px">General Report</h4>         
+                <div class="alert alert-info" role="alert" style="height:70px;width:600px;margin:auto">         
+                  {% if compound %}         
+                  <h2 style="text-align:center;font-size:25px"> The Average Sentiment is {{htmlcompound}} </h2>       
+                  {%endif%}         
+                </div>         
+              </div>         
+            </div>  
+            <br><br>       
+            <!--end of general report-->                    
+          </div>           
+          <!-- end of parent div for reports-->
+        </div>            
+        <div style="margin-top: 50px">           
+          <h3 style="color: black; text-align: center;font-size:30px">Detailed Report</h3>           
+          <div class="alert alert-info" role="alert" style="height:140px;width:750px;margin:auto">           
+            {% if compound %}          
+            <h4 class="report-text"> {{positive}} "% people had positive opinions</h4>          
+            <h4 class="report-text"> {{neutral}} "% people had neutral opinions</h4>           
+            <h4 class="report-text"> {{negative}} "% people had negative opinions</h4>        
+            {%endif%}
+          </div>
+        </div>         
+        <!--end of report-->
+        <br>
+        </ul>
+      </div>
+    </div>
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+    </div>
+  </div>
+</section><!-- End Portfolio Section -->
+
+  </main><!-- End #main -->
+   <!-- ======= Footer ======= -->
+   <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-info">
+                  <h3>OpinionPoint<span>.</span></h3>
+                  <p>
+                    Yelahanka, Bangalore<br>
+                    Karnataka 560064 <br>
+                    INDIA<br><br>
+                    <strong>Phone:</strong> +1 5589 55488 55<br>
+                    <strong>Email:</strong> info@example.com<br>
+                  </p>
+                  <div class="social-links mt-3">
+                    <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="skype"><i class="bi bi-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Trending Topics Analysis</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Keyword based Real-Time Analysis</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Post a Review</a></li>
+                  <li><i class="bi bi-chevron-right"></i> <a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-4 col-md-6">
+                <h4>Our Newsletter</h4>
+                <p>Subscribe to our Newsletter to keep in touch with our latest features.</p>
+                <form action="" method="post">
+                  <input type="email" placeholder="Email" name="email">
+                  <button style="background-color: #ffc451;" type="submit">Subscribe</button>
+                </form>
+              </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        <strong><span>&copy; 2022 OpinionPoint</span></strong>. All Rights Reserved.
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/vendor/purecounter/purecounter.js"></script>
+  <script src="static/vendor/aos/aos.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/js/main.js"></script>
+
+</body>
+
+</html>
